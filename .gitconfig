@@ -1,0 +1,9 @@
+[user]
+	name = Martin Knoll
+	email = martinknoll@me.com
+[color]
+	ui = true
+[merge]
+	tool = gvimdiff
+[diff]
+	tool = gvimdiff
