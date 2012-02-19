@@ -9,8 +9,9 @@ set cursorline
 " set cursorcolumn
 
 set ts=4
-set sw=4
-set noexpandtab
+set sts=2
+set sw=2
+set expandtab
 
 set incsearch
 set hlsearch
@@ -44,14 +45,20 @@ map <C-h> :A<CR>
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
+" irb
+autocmd BufReadPost *
+	\ if line("'\"") > 1 && line("'\"") <= line("$") |
+	\ 	exe "normal! g`\"" |
+	\ endif
+
 " Complete only the current buffer and includes
-set complete=.,i
+"set complete=.,i
 
 " Complete options (disable preview scratch window)
-set completeopt=menu,menuone,longest
+"set completeopt=menu,menuone,longest
 
 " SuperTab option for context aware completion
-let g:SuperTabDefaultCompletionType="context"
+"let g:SuperTabDefaultCompletionType="context"
  
 " Disable auto popup, use <Tab> to autocomplete
-let g:clang_complete_auto=0
+"let g:clang_complete_auto=0

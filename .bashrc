@@ -6,6 +6,13 @@ export PS1='\[\e[1;31m\]\$ \[\e[0m\]'
 # bash completion
 source /usr/local/bash-completion/bash_completion
 
+# default compiler
+export CC=clang
+
 # cross compiler
-export PATH=/usr/local/gcc-4.5.2-for-linux32/bin:$PATH
-export PATH=/usr/local/arm/bin:$PATH
+export PATH=~/cross/arm-none-eabi/bin:$PATH
+export PATH=~/cross/avr/bin:$PATH
+export PATH=~/cross/linux32/bin:$PATH
+
+# ruby binaries
+export PATH=/usr/local/Cellar/ruby/1.9.3-p0/bin/:$PATH
